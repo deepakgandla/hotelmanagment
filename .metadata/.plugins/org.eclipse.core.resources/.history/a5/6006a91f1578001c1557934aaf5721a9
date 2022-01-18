@@ -1,0 +1,18 @@
+package com.app;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.app.dao.HotelDao;
+
+@Controller
+public class HotelController {
+	@Autowired
+	HotelDao hotelDao;
+	@RequestMapping("/book")
+	public String allHotels(Model model) {
+		return "show_hotels";
+	}
+}

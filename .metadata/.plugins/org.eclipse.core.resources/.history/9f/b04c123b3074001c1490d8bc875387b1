@@ -1,0 +1,11 @@
+package com.app.service.impl;
+
+import com.app.service.AuthService;
+
+public class AuthServiceImpl implements AuthService {
+	public boolean isValid(String email, String password) {
+		
+		return false;
+	}
+	
+}

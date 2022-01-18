@@ -1,0 +1,15 @@
+package com.app.aop;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+
+@Aspect
+public class LoginAspect {
+	@Before("execution(public void payment*(..))")
+	public void login(JoinPoint j) {
+		System.out.println("If you want to pay" + j.getArgs()[0]);
+		System.out.println("You must log in first");
+		System.out.println("Authonticated success");
+	}
+}

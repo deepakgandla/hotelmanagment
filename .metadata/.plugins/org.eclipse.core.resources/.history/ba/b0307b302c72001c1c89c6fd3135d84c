@@ -1,0 +1,13 @@
+package com.app.dao;
+
+import java.util.List;
+
+import com.app.model.Hotel;
+
+public interface HotelDao {
+	int save(Hotel hotel);
+	List<Hotel> getAll();
+	void delete(int id);
+	int update(int id);
+	Hotel get(int id);
+}

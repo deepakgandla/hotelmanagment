@@ -1,0 +1,22 @@
+package com.app.dao.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Component;
+
+import com.app.dao.UserDao;
+import com.app.model.User;
+
+@Component
+public class UserDaoImpl implements UserDao {
+	@Autowired
+	HibernateTemplate hibernateTemplate;
+	public boolean loginUser(String email, String password) {
+		String query = "select * from user where email=? and password=?";
+		Object[] values = {email, password};
+		hibernateTemplate.find(query, values);
+		
+		return false;
+	}
+
+}

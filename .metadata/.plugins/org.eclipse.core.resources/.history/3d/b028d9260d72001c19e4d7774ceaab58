@@ -1,0 +1,81 @@
+package com.app;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpRequest;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.view.RedirectView;
+
+import com.app.dao.HotelDao;
+import com.app.dao.impl.HotelDaoImpl;
+import com.app.model.Hotel;
+
+@Controller
+public class HomeController {
+	
+	@Autowired
+	HotelDao hotelDao;
+	
+	@RequestMapping("/home")
+	public String home(Model model) {
+		model.addAttribute("page", "home");
+		return "home";
+	}
+	
+	@RequestMapping("/add")
+	public String add(Model model) {
+		model.addAttribute("page", "add");
+		Hotel hotel = new Hotel();
+		model.addAttribute("hotel", hotel);
+		return "home";
+	}
+	
+	@RequestMapping(value="/saveHotel", method=RequestMethod.POST)
+	public String saveHotel(@ModelAttribute("hotel") Hotel hotel,Model model) {
+		model.addAttribute("page", "home");
+		hotelDao.save(hotel);
+		return "home";
+	}
+	
+	@RequestMapping("/hotels")
+	public String hotels(Model model) {
+		model.addAttribute("page", "hotels");
+		List<Hotel> hotels = hotelDao.getAll();
+		model.addAttribute("hotels", hotels);
+		return "home";
+	}
+	
+	
+	@RequestMapping("/delete/{hotelId}")
+	public RedirectView deleteHotel(@PathVariable("hotelId") int id, HttpServletRequest request ) {
+		RedirectView redirect = new RedirectView();
+		System.out.println(id);
+		hotelDao.delete(id);
+		redirect.setUrl(request.getContextPath()+"/");
+		return redirect;
+	}
+	
+	@RequestMapping("/update/{hotelId}")
+	public String update(@PathVariable("hotelId") int id, Model model) {
+		Hotel hotel = hotelDao.get(id);
+		model.addAttribute("hotel", hotel);
+		return "update_hotel";
+	}
+	
+	@RequestMapping("/update_hotel")
+	public RedirectView updateHotel(@ModelAttribute("hotel") Hotel hotel, HttpServletRequest request) {
+		RedirectView redirectView = new RedirectView();
+		redirectView.setUrl(request.getContextPath()+"/");
+		return redirectView;
+	}
+	
+}

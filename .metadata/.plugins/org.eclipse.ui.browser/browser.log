@@ -1,0 +1,32 @@
+
+Jan 06, 2022 15:22:31.12 NEW SESSION
+Jan 06, 2022 15:22:31.12 [3052:13300:0106/152231.118:ERROR:external_registry_loader_win.cc(158)] File C:\Users\deepak\AppData\Local\Google\Drive\user_default\apdfllckaahabafndbhieahigkjlhalf_live.crx for key Software\Google\Chrome\Extensions\apdfllckaahabafndbhieahigkjlhalf does not exist or is not readable.
+Jan 06, 2022 15:22:33.71 [3052:12728:0106/152233.718:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+Jan 06, 2022 15:22:33.73 [3052:5908:0106/152233.733:ERROR:device_event_log_impl.cc(214)] [15:22:33.730] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Jan 06, 2022 15:22:33.76 [3052:12728:0106/152233.760:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+Jan 06, 2022 15:22:33.76 [3052:12728:0106/152233.760:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+Jan 06, 2022 15:22:33.76 [3052:12728:0106/152233.764:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+Jan 06, 2022 15:23:09.61 [11928:9528:0106/152309.616:ERROR:external_registry_loader_win.cc(158)] File C:\Users\deepak\AppData\Local\Google\Drive\user_default\apdfllckaahabafndbhieahigkjlhalf_live.crx for key Software\Google\Chrome\Extensions\apdfllckaahabafndbhieahigkjlhalf does not exist or is not readable.
+Jan 06, 2022 15:23:12.08 [11928:5068:0106/152312.085:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+Jan 06, 2022 15:23:12.08 [11928:5068:0106/152312.086:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+Jan 06, 2022 15:23:12.09 [11928:5068:0106/152312.086:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+Jan 06, 2022 15:23:12.09 [11928:5068:0106/152312.093:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+Jan 06, 2022 15:23:12.10 [11928:8936:0106/152312.105:ERROR:device_event_log_impl.cc(214)] [15:23:12.105] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Jan 06, 2022 15:23:56.18 [7488:1972:0106/152356.186:ERROR:external_registry_loader_win.cc(158)] File C:\Users\deepak\AppData\Local\Google\Drive\user_default\apdfllckaahabafndbhieahigkjlhalf_live.crx for key Software\Google\Chrome\Extensions\apdfllckaahabafndbhieahigkjlhalf does not exist or is not readable.
+Jan 06, 2022 15:23:58.66 [7488:10528:0106/152358.665:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+Jan 06, 2022 15:23:58.66 [7488:10528:0106/152358.665:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+Jan 06, 2022 15:23:58.67 [7488:10528:0106/152358.666:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+Jan 06, 2022 15:23:58.67 [7488:10528:0106/152358.672:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+Jan 06, 2022 15:23:58.69 [7488:8500:0106/152358.689:ERROR:device_event_log_impl.cc(214)] [15:23:58.689] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Jan 06, 2022 15:31:03.80 [7488:12920:0106/153103.805:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+Jan 06, 2022 15:31:32.86 [7488:12920:0106/153132.862:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+Jan 06, 2022 15:32:18.69 [7488:12920:0106/153218.696:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+Jan 06, 2022 15:32:34.65 [7488:12920:0106/153234.654:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+Jan 06, 2022 15:32:47.20 [7488:12920:0106/153247.205:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+Jan 06, 2022 15:32:49.23 [7488:8500:0106/153249.232:ERROR:device_event_log_impl.cc(214)] [15:32:49.233] USB: usb_service_win.cc:261 Failed to get device driver name: Element not found. (0x490)
+Jan 06, 2022 15:32:57.60 [7488:12920:0106/153257.609:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+Jan 06, 2022 15:33:58.44 [7488:12920:0106/153358.447:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -106
+Jan 06, 2022 15:34:58.26 [7488:12920:0106/153458.267:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+Jan 06, 2022 15:35:00.70 [7488:12920:0106/153500.702:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+Jan 06, 2022 15:35:04.12 [7488:12920:0106/153504.121:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+Jan 06, 2022 21:46:10.54 [7488:8500:0106/214610.526:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost

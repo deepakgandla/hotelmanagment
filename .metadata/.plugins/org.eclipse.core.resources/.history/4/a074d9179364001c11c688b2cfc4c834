@@ -1,0 +1,12 @@
+package com.app.aop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+
+@Aspect
+public class LoginAspect {
+	@Before("execution(public void payment*(..))")
+	public void login() {
+		System.out.println("Authonticated success");
+	}
+}

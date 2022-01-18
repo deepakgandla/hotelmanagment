@@ -1,0 +1,77 @@
+package com.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.stereotype.Controller;
+
+import com.exception.NoStockException;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.validation.BindingResult;
+import com.model.Product;
+import com.service.ShoppingService;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.servlet.ModelAndView;
+
+
+//use appropriate annotation to configure ShoppingController as Controller
+@Controller
+public class ShoppingController {
+	
+	//use appropriate annotation 
+	@Autowired
+	private ShoppingService shoppingService;
+	
+  @ModelAttribute("productNames")
+  public Map<String, String> populateProduct(){
+      Map<String, String> pairs = new HashMap<>();
+      pairs.put("Apple", "Apple");
+      pairs.put("Orange", "Orange");
+      pairs.put("JackFruit", "JackFruit");
+      pairs.put("Mango", "Mango");
+      pairs.put("Grapes", "Grapes");
+      return pairs;
+  }
+
+	//invoke the service class - calculateCost method.
+	
+	@RequestMapping(value="/calculate", method=RequestMethod.POST)
+	public String calculateCost(@ModelAttribute("product") Product product, BindingResult result,ModelMap model) throws NoStockException{
+		
+		//fill the code
+		if(result.hasErrors()){
+		    return "showPage";
+		}
+		else{
+		 		double cost = 0;
+		 		cost = shoppingService.calculateCost(product);
+		 		model.addAttribute("cost", cost);
+		 		model.addAttribute("costPerKg", product.getCostPerKg());
+		 		model.addAttribute("name", product.getProductName());
+		 		model.addAttribute("quantity", product.getQuantity());
+		 		
+		}
+		return "billDesk";
+	}
+	
+
+	//use appropriate annotation 
+	@ExceptionHandler(NoStockException.class)
+	public ModelAndView exceptionHandler(Exception exception) {
+		
+		//fill the code
+ 		ModelAndView mv = new ModelAndView();
+ 		mv.setViewName("exceptionpage");
+				return mv;
+	}
+	
+	@RequestMapping(value="/showPage", method=RequestMethod.GET)
+	public String showPage(@ModelAttribute("product") Product product){
+	    return "showPage";
+	}
+	
+}

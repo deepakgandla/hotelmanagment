@@ -1,0 +1,13 @@
+package com.app.service.impl;
+
+import com.app.model.User;
+import com.app.service.RegisterService;
+
+public class RegisterServiceImpl implements RegisterService {
+
+	public int registerUser(User user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

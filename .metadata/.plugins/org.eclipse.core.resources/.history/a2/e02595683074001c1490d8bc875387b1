@@ -1,0 +1,12 @@
+package com.app.service.impl;
+
+import com.app.model.User;
+import com.app.service.AuthService;
+
+public class AuthServiceImpl implements AuthService {
+	public User isValid(String email, String password) {
+		
+		return false;
+	}
+	
+}

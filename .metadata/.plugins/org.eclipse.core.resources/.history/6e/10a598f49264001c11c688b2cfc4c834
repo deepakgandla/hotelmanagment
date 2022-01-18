@@ -1,0 +1,11 @@
+package com.app.aop;
+
+public class PaymentService {
+	public void paymentCredit() {
+		System.out.println("Amount credited");
+	}
+	
+	public void paymentDebit() {
+		System.out.println("Amount debited");
+	}
+}

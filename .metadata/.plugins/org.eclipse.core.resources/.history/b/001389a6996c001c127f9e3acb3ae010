@@ -1,0 +1,10 @@
+package practice;
+
+public class Min {
+private int a;
+	public static void main(String[] args) {
+		
+       System.out.println(new Min().a);
+	}
+
+}

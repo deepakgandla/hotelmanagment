@@ -1,0 +1,17 @@
+package com.app.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.app.dao.HotelDao;
+import com.app.service.HotelService;
+
+public class HotelServiceImpl implements HotelService {
+	
+	@Autowired
+	HotelDao hotelDao;
+	public int getAvailbleRooms() {
+		
+		return 0;
+	}
+
+}

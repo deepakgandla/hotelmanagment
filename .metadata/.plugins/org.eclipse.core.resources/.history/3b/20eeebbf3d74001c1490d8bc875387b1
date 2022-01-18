@@ -1,0 +1,17 @@
+package com.app.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.app.dao.UserDao;
+import com.app.model.User;
+import com.app.service.AuthService;
+
+public class AuthServiceImpl implements AuthService {
+	@Autowired
+	UserDao userDao;
+	public User isValid(String email, String password) {
+		User user = userDao.loginUser(email, password);
+		return user;
+	}
+	
+}

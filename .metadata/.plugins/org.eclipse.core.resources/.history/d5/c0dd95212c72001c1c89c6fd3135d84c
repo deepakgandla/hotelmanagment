@@ -1,0 +1,48 @@
+package com.app.dao.impl;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Component;
+
+import com.app.dao.HotelDao;
+import com.app.model.Hotel;
+
+
+@Component
+public class HotelDaoImpl implements HotelDao{
+
+	@Autowired
+	HibernateTemplate hibernateTemplate;
+	
+	@Transactional
+	public int save(Hotel hotel) {
+		Integer result = (Integer) this.hibernateTemplate.save(hotel);
+		return result;
+	}
+	
+	public List<Hotel> getAll() {
+		List<Hotel> hotels = this.hibernateTemplate.loadAll(Hotel.class);
+		return hotels;
+	}
+
+	@Transactional
+	public void delete(int id) {
+		Hotel hotel = hibernateTemplate.load(Hotel.class, id);
+		hibernateTemplate.delete(hotel);
+	}
+
+	public int update(int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public Hotel get(int id) {
+		Hotel hotel = hibernateTemplate.get(Hotel.class, id);
+		return hotel;
+	}
+
+}
