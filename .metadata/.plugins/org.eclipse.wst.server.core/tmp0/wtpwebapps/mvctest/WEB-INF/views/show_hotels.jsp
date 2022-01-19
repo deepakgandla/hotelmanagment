@@ -11,6 +11,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">
 /* BEGIN CARD DESIGN */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 .hero {
   display: inline-block;
   position: relative;
@@ -104,6 +109,8 @@ body {
   top:5px;
   right:5px;
 }
+
+
 </style>
 <!-- Bootstrap CSS -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -117,6 +124,7 @@ body {
 <title>Book Hotel</title>
 </head>
 <body>
+<jsp:include page="navbar.jsp"></jsp:include>
 <c:forEach items="${hotels}" var="hotel">
  
 <div class="btn">

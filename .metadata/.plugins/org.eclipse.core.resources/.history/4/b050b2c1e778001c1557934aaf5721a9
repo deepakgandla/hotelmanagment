@@ -124,7 +124,7 @@ body {
 <title>Book Hotel</title>
 </head>
 <body>
-<jsp:include page="navbar.jsp"></jsp:include>
+
 <c:forEach items="${hotels}" var="hotel">
  
 <div class="btn">
